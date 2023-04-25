@@ -80,7 +80,7 @@ with DAG(
     task_get_posts = SimpleHttpOperator(
         task_id='get_posts',
         http_conn_id='api_weather',
-        endpoint='weather?q=Israel&appid=ba5831e9252f09fd13e6d1f1da96d1e2&units=metric',
+        endpoint='weather?q=Israel&appid=secretid&units=metric',
         method='GET',
         response_filter=lambda response: json.loads(response.text),
         email_on_failure=True,
