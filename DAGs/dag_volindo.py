@@ -71,7 +71,7 @@ with DAG(
     task_is_api_active = HttpSensor(
         task_id='is_api_active',
         http_conn_id='api_weather',  # Remember config correct Connection_id in Admin > Connections
-        endpoint='weather?q=Israel&appid=ba5831e9252f09fd13e6d1f1da96d1e2&units=metric',
+        endpoint='weather?q=Israel&appid=secretid&units=metric',
         email_on_failure=True,
         email='oscar.sanchezdw@gmail.com'
     )
